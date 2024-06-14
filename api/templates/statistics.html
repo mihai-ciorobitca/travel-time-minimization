@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Statistics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/plot.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/roundabout.ico') }}" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body class="plot"  data-static-url="{{ url_for('static', filename='') }}">
+  <div class="homeContainer"></div>
+  
+  <div class="presentation-container">
+    <button id="prevButton" class="arrow-button">
+      Back
+    </button>
+    <div id="waitingTime" class="statistic-page">
+      <canvas id="waitingTimeChart"></canvas>
+    </div>
+    <div id="crowding" class="statistic-page">
+      <canvas id="crowdingChart"></canvas>
+    </div>
+    <div id="lanesTraffic" class="statistic-page">
+      <canvas id="lanesChart"></canvas>
+    </div>
+    <button id="nextButton" class="arrow-button">
+      Next
+    </button>
+  </div>
+  
+  <script src="{{ url_for('static', filename='js/plot.js') }}"></script>
+</body>
+</html>
+
